@@ -5,6 +5,10 @@
 		display: none;
 	}
 	
+	.define5  li:nth-child(n+6)  {
+		display: none;
+	}
+	
 	.breadcrumbs-wrapper {
 		background-color: #ffd93b;	
 		min-height: 54px;
@@ -58,7 +62,7 @@
 		background: none;
 		float: right;
 		width: 82%;
-		
+		font-size: 0;
 		
 		
 		h2 {
@@ -66,7 +70,6 @@
 			text-decoration: none;
 		}
 		div > ul > li {
-			margin-left: -5px;	
 			margin-bottom: 25px;
 		}
 		

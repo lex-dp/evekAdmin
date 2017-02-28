@@ -3,6 +3,9 @@
 .toogleChildren {
   display: none; }
 
+.define5 li:nth-child(n+6) {
+  display: none; }
+
 .breadcrumbs-wrapper {
   background-color: #ffd93b;
   min-height: 54px; }
@@ -38,12 +41,12 @@
   box-shadow: none;
   background: none;
   float: right;
-  width: 82%; }
+  width: 82%;
+  font-size: 0; }
   .tabs .directory-content h2 {
     margin: 0 0 20px 0;
     text-decoration: none; }
   .tabs .directory-content div > ul > li {
-    margin-left: -5px;
     margin-bottom: 25px; }
   .tabs .directory-content div > ul > li > a {
     text-decoration: none;

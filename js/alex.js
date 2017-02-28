@@ -21,6 +21,8 @@ BtnOption.prototype.checkInputDatas = function() {
 		return false;
 	}
 	
+
+	
 	if(typeof(this.find) != "string") {			
 		console.log("Не правильно введено значение для find, это должно быть класс написанный строкой, например: newClass");
 		return false;
@@ -113,6 +115,11 @@ BtnOption.prototype.toogle = function() {
 	var hideMessage = this.hideMessage; 
 	var showMessage = this.showMessage; 
 
+	if(this.message == showMessage) {
+		this.message = hideMessage;
+	}else {
+		this.message = showMessage;
+	}
 	
 	
 	for (var i = 0; i < find.length; i++) {
@@ -128,8 +135,12 @@ BtnOption.prototype.toogle = function() {
 			var findAllChildrens = self.querySelectorAll("li");
 			var childrensLength = findAllChildrens.length;
 			
-
+			//Если детей меньше чем у число после которого нужно их скрывать, то отменяем действие 
+			if(childrensLength <= count) {
+				return false;
+			}
 			
+		
 			
 			var checkClassA = target.classList.contains("toogle");
 			var checkClassDiv = target.parentNode.classList.contains("toogle");
@@ -140,7 +151,14 @@ BtnOption.prototype.toogle = function() {
 			}
 			
 			for (var j = count; j < childrensLength; j++) {
-				findAllChildrens[j].classList.toggle("toogleChildren");
+				//findAllChildrens[j].classList.toggle("toogleChildren");
+				var isDisplayNone = getComputedStyle(findAllChildrens[j]).display;
+				if(isDisplayNone == "none") {
+					findAllChildrens[j].style.display = "block";
+				}else {
+					findAllChildrens[j].style.display = "none";
+				}
+				
 			}
 		
 		
@@ -162,7 +180,7 @@ BtnOption.prototype.toogle = function() {
 
 BtnOption.prototype.controller = function() {
 	this.checkInputDatas();
-	this.hideElements();
+	//this.hideElements();
 	this.toogle();
 	this.createElements();
 }
