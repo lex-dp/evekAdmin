@@ -47,7 +47,7 @@
 		.directory-nav {
 			margin-top: 30px;
 			width: 17%;
-			min-width: 335px;
+			min-width: 331px;
 			margin-bottom: 10px;
 			margin-right: 0;
 			
@@ -61,14 +61,18 @@
 		box-shadow: none;
 		background: none;
 		float: right;
-		width: 82%;
+		width: 82.2%;
 		font-size: 0;
 		
 		
 		h2 {
-			margin: 0 0 20px 0;
+			margin: -5px 0px 11px 0px;
 			text-decoration: none;
+			font-size: 36px;
+			font-weight: normal;
 		}
+		
+		
 		div > ul > li {
 			margin-bottom: 25px;
 		}
@@ -76,7 +80,18 @@
 		div > ul > li > a {
 			text-decoration: none;
 			font-size: 20px;
-		}	
+			font-weight: bold;
+		}
+		
+		div > ul > li > ul > li > a {
+			font-size: 17px;	
+			text-decoration: none;
+			border-bottom: 2px solid grey;
+			
+			&:hover {
+				border-bottom: none;
+			}
+		}
 		
 		div > ul > li > ul {
 			border-top: 3px solid #ffd93b;
@@ -85,7 +100,14 @@
 			
 		}
 		.directory-button {
-			margin: 30px 0 15px 0;
+			margin: 20px 0 15px 0;
+			display: inline-block;
+			
+			a {
+				padding: 9px 18px;
+				font-size: 14px;
+				border-bottom: 3px solid #000;
+			}
 		}
 		
 	}
@@ -97,7 +119,7 @@
 		.consultants {
 			background-color: #2ecd71;
 			width: 17%;
-			min-width: 332px;
+			min-width: 331px;
 			padding: 26px 20px 29px 30px;
 			overflow: hidden;
 			
@@ -136,6 +158,8 @@
 				border: 3px solid white;
 				border-radius: 45px;
 				margin-right: 22px;
+				position: relative;
+				top: -4px;
 			}
 			
 			p {
@@ -166,7 +190,7 @@
 			.calculate {
 				
 				position: relative;
-				left: 10px;
+				left: 8px;
 				
 				a {
 					display: block;		
@@ -203,82 +227,174 @@
 		
 		@media (min-width: 1919px) {
 			.tabs .directory-content > div > ul > li {
-				width: 33%;
+				width: 33.3%;
 			}
 		}
+		@media (max-width: 1900px) {
+			.tabs .directory-content {
+				width: 80%;
+			}
+		}
+		
 		@media (max-width: 1700px) {
+			.tabs .directory-content {
+				width: 77%;
+			}
+			
 			.tabs .directory-content > div > ul > li {
 				width: 50%;
 			}
 		}
 		@media (max-width: 1500px) {
-			.tabs .directory-content {
-				width: 73.4%;
+			
+			.tabs .directory-nav {
+				margin-top: 39px;
+				
 			}
+			
+		
+			.tabs .directory-content {
+				width: 75.5%;
+				
+				div > ul > li > ul {
+					padding-top: 20px;
+					
+					li > a {
+						font-size: 15px;
+					}
+				}
+				
+				.directory-button a {
+					padding: 9px 14px;
+					font-size: 11px;
+				}
+			
+			}
+			
+	
 		}
 		
 		
+		@media (max-width: 1365px) {
+			.tabs .directory-content {
+				width: 73%;
+			}
+		}	
+		
 		@media (max-width: 1279px) {
+			.breadcrumbs-wrapper {
+				min-height: 40px;
+				
+				.breadcrumbs {
+					padding: 5px 30px;
+					
+					a {
+						font-size: 13px;
+					}
+				}
+			}
+			
+			
 			.tabs  {			
 				.directory-nav {
 					width: 100%;
-
+					margin-top: 27px;
+					text-align: left;
+					
 					ul li {
 						background-color: #ebebeb;
-						margin-right: 15px;
-						margin-top: 15px;
+						margin-right: 10px;
+						margin-top: 0px;
 						border-radius: 6px;
 								
 						a {
 							box-shadow: 0px 3px 0 #595959;
+							font-size: 14px;
+							padding: 3px 12px;
 							border-radius: 6px;
 						}
 					}	
+					
+					ul li.active a {
+						border-radius: 6px;
+					}
 				}
+				
 			
 				.directory-content {
 					width: 100%;
 					float: none;
+					margin-top: 0;
+					
 					
 					h2 {
 						text-align: center;
+						font-size: 26px;
+						padding-top: 0;
+						margin: -5px 0px 7px 0px;
 					}
+					
+					div > ul > li > ul > li {
+						margin-bottom: 1px;
+					}
+					
+					div > ul > li > a {
+						font-size: 19px !important;
+					}
+					
+					 .directory-button  {
+						margin: 24px 0 15px 0;
+						 a {
+							 padding: 8px 14px;
+							 font-size: 11px;
+						 }
+					 }
 				}
 			}
 			
 			.consultants-wrapper { 
-				padding: 0 23px;
+				padding: 0 30px;
+
 			}
 			.consultants { 
 				width: 100%;
-				border-radius: 8px;
-				padding: 20px 20px 20px 30px;
+				border-radius: 5px;
+				padding: 5px 2px 22px 0px;
 					
 				h2 {
-					font-size: 20px;
+					font-size: 15px;
 					text-align: center;
+					width: 240px;
+					margin: 12px auto;
 				}
 				
 				.consultant-info {
-					width: 200px;
+					width: 181px;
 					img {
 						border: 5px solid white;
 						border-radius: 50px;
-						width: 70px;
+						width: 57px;
+						top: -3px;
+						margin-right: 16px;
 					}
 					
-					p {
-						padding-top: 5px;
-					}
+					
 					
 					.consultant-telephone {
 						text-align: center;
 						padding-top: 10px;
+						font-size: 18px;
 					}
 				}
 				
 				.buttons {
-					margin-top: -12px;
+					margin-top: -18px;
+					left: 0;
+					width: 282px;
+					
+					a {
+						font-size: 16px;
+					}
 				}
 			}
 			
@@ -289,20 +405,22 @@
 				
 				.calculate {
 					text-align: center;
+					left: 0;
 					
 					a {
 						display: inline-block;
-						margin: 0 12px 0px 12px;
-						width: 345px;
+						margin: 0 13px 0px 12px;
+						width: 339px;
+						font-size: 16px;
 					}
 					
 					.calculator {
-						background: url(../../img/calculate.png) 49px -39px #ffd93b no-repeat;
-						padding-left: 50px;
+						background: url(../../img/calculate.png) 52px -41px #ffd93b no-repeat;
+						padding-left: 47px;
 					}
 					
 					.calculation {
-						background: url(../../img/calculate.png) 25px -160px #ffd93b no-repeat;
+						background: url(../../img/calculate.png) 37px -160px #ffd93b no-repeat;
 						padding-left: 50px;
 					}
 				}
@@ -316,31 +434,124 @@
 				display: none;
 			}
 			
-			.tabs .directory-content > div > ul > li {
-				width: 100%;
-				margin-bottom: 40px;				
-			}	
 			
+			.tabs  {		
+				.directory-nav {
+					min-width: 300px;
+					margin-top: 43px;
+					text-align: center;
+					
+						
+					
+					ul li {
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+				}
+			
+				.directory-content {
+					text-align: left;
+					padding-left: 20px;
+					padding-right: 20px;
+					
+					
+					h2 {
+						font-size: 19px;
+						margin: 0px 0px 15px 0px;
+					}
+					
+					div > ul > li {
+						width: 100%;
+						margin-bottom: 40px;	
+
+						ul > li {
+							margin-bottom: 3px;
+						}
+						
+						ul {
+							padding-top: 10px;
+							margin-top: 10px;							
+						}
+
+						
+						a {
+							font-size: 16px !important;
+							font-weight: normal;
+						}
+					}
+					
+					.directory-button a {
+						font-size: 11px !important;
+						font-weight: normal;
+						padding: 8px 16px;
+					}
+				}
+			
+				
+				
+			}
+			
+			.consultants-wrapper {
+				padding: 0 20px;
+
+				.consultants {
+					min-width: 260px;
+					
+					h2 {
+						font-size: 15px;
+						width: 250px;
+					}
+					
+					.consultant-info  {
+						
+						.consultant-position {
+							margin-top: -3px;
+						}
+						
+
+					}	
+					
+					.buttons {
+						width: 214px;
+						left: -3px;
+						margin-top: -16px;
+						
+						a {
+							font-size: 16px;
+							border-bottom: 3px solid #000;
+						}
+
+					}
+					
+					
+				}
+			}
+			
+				
 			.calculate-wrapper {
+				min-width: 260px;
+				margin-top: 15px;
+				margin-bottom: 15px;
 				
 				.calculate {
-					width: $buttonsWidth;
+					width: 280px;
 					margin: 0 auto;
 					text-align: left;
 					
 					a {
-						width: $buttonsWidth;
+						width: 100%;
 						margin: 0 0 15px 0;
+						font-size: 15px;
 					}
 					
 					.calculator {
-						background: url(../../img/calculate.png) -20px -39px #ffd93b no-repeat;
-						padding-left: 60px;
+						background: url(../../img/calculate.png) -28px -39px #ffd93b no-repeat;
+						padding-left: 55px;
 					}
 					
 					.calculation {
-						background: url(../../img/calculate.png) -24px -160px #ffd93b no-repeat;
-						padding-left: 60px;
+						background: url(../../img/calculate.png) -30px -160px #ffd93b no-repeat;
+						padding-left: 55px;
 					}
 				}
 				
@@ -348,61 +559,7 @@
 			
 		}
 		
-		@media (max-width: 400px) {
-			
-						
-			
-			.tabs  {					
-				.directory-content {
-					text-align: left;
-				}
-				
-				.directory-nav {
-					min-width: 300px;
-					
-					ul li {
-						margin-right: 0;
-					}
-				}
-				
-			}
-			
-			.consultants-wrapper {
-				padding: 0 10px;
-
-				.consultants {
-					min-width: 300px;
-					
-					h2 {
-						font-size: 17px;
-						width: 250px;
-					}
-					
-					.buttons {
-						width: 250px;
-						
-						a {
-							font-size: 17px;
-						}
-						
-					}
-				}
-			}
-			
-			.calculate-wrapper {
-				min-width: 300px;
-				
-				.calculate {
-					width: 300px;
-					a {
-						width: 100%;
-						font-size: 17px;
-					}
-				}
-				
-			}
-			
-		}
+	
 		
 	
 

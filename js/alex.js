@@ -193,8 +193,8 @@ var use = new BtnOption({
 	find: "define5",
 	divClass: ["buttons", "directory-button", "toogle"],
 	aClass: "yellow-btn",
-	showMessage: "Показать весь список",
-	hideMessage: "Скрыть весь список"
+	showMessage: "ПОКАЗАТЬ ВЕСЬ СПИСОК",
+	hideMessage: "СКРЫТЬ ВЕСЬ СПИСОК"
 });	
 
 /*
